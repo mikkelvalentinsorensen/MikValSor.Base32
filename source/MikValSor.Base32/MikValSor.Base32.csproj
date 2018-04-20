@@ -13,5 +13,6 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Description>Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.</Description>
     <Copyright>Mikkel Valentin Sørensen</Copyright>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 </Project>

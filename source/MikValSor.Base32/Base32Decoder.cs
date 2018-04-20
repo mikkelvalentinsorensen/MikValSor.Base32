@@ -1,7 +1,22 @@
 ﻿namespace MikValSor.Encoding
 {
+	/// <summary>
+	///		Class for decoding Base32 strings to byte arrays.
+	/// </summary>
 	public static class Base32Decoder
-	{		
+	{
+		/// <summary>
+		///		Converte a Base32 string to byte array.
+		/// </summary>
+		/// <param name="base32">
+		///		Base32 formated string.
+		/// </param>
+		/// <param name="format">
+		///		Specify the Base32 encoding format.
+		/// </param>
+		/// <returns>
+		///		byte array with value of Base32 encoding.
+		/// </returns>
 		public static byte[] Decode(string base32, Base32Format format = Base32Format.RFC4648)
 		{
 			if (base32.Length == 0) return new byte[0];

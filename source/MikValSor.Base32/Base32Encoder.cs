@@ -3,27 +3,43 @@ using System.Text;
 
 namespace MikValSor.Encoding
 {
+	/// <summary>
+	///		Class used to endoce byte arrays to Base32 strings.
+	/// </summary>
 	public static class Base32Encoder
 	{
-		public static string Encode(byte[] data, Base32Format format = Base32Format.RFC4648, bool padOutput = true)
+		/// <summary>
+		///		Encodes the byte array to a Base32 string.
+		/// </summary>
+		/// <param name="byteArray">
+		///		Byte array for encoding.
+		/// </param>
+		/// <param name="format">
+		///		Specify the Base32 encoding format.
+		/// </param>
+		/// <param name="padOutput">
+		///		Select if end padding of the Base32 string is wanted.
+		/// </param>
+		/// <returns></returns>
+		public static string Encode(byte[] byteArray, Base32Format format = Base32Format.RFC4648, bool padOutput = true)
 		{
-			if (data == null) throw new ArgumentNullException(nameof(data));
-			if (data.Length == 0) return String.Empty;
-			if (data.Length >= (1 << 28)) throw new ArgumentOutOfRangeException(nameof(data));
+			if (byteArray == null) throw new ArgumentNullException(nameof(byteArray));
+			if (byteArray.Length == 0) return String.Empty;
+			if (byteArray.Length >= (1 << 28)) throw new ArgumentOutOfRangeException(nameof(byteArray));
 
-			StringBuilder stringBuilder = new StringBuilder((data.Length * 8 + 4) / 5);
+			StringBuilder stringBuilder = new StringBuilder((byteArray.Length * 8 + 4) / 5);
 
-			int buffer = data[0];
+			int buffer = byteArray[0];
 			int next = 1;
 			int bitsLeft = 8;
-			while (bitsLeft > 0 || next < data.Length)
+			while (bitsLeft > 0 || next < byteArray.Length)
 			{
 				if (bitsLeft < 5)
 				{
-					if (next < data.Length)
+					if (next < byteArray.Length)
 					{
 						buffer <<= 8;
-						buffer |= (data[next++] & 0xff);
+						buffer |= (byteArray[next++] & 0xff);
 						bitsLeft += 8;
 					}
 					else
