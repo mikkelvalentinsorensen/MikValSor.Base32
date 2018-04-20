@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <RootNamespace>MikValSor.Encoding</RootNamespace>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Mikkel Valentin Sørensen</Authors>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/mikkelvalentinsorensen/MikValSor.Base32/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mikkelvalentinsorensen/MikValSor.Base32</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mikkelvalentinsorensen/MikValSor.Base32</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Base32 Encoder Decoder RFC4648</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.</Description>
+    <Copyright>Mikkel Valentin Sørensen</Copyright>
+  </PropertyGroup>
+</Project>
