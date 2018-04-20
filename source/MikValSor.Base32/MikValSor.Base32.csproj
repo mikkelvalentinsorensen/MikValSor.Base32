@@ -14,5 +14,10 @@
     <Description>Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.</Description>
     <Copyright>Mikkel Valentin Sørensen</Copyright>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>1.0.1 - Added in class documentation.
+1.0.0 - Initial release.</PackageReleaseNotes>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 </Project>
