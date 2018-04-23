@@ -65,17 +65,17 @@
 									{
 										return base32.Substring(0, base32[l - 7]);
 									}
-									else return base32.Substring(0, base32[l - 6]);
+									else return base32.Substring(0, l - 6);
 								}
-								else return base32.Substring(0, base32[l - 5]);
+								else return base32.Substring(0, l - 5);
 							}
-							else return base32.Substring(0, base32[l - 4]);
+							else return base32.Substring(0, l - 4);
 						}
-						else return base32.Substring(0, base32[l - 3]);
+						else return base32.Substring(0, l - 3);
 					}
-					else return base32.Substring(0, base32[l - 2]);
+					else return base32.Substring(0, l - 2);
 				}
-				else return base32.Substring(0, base32[l - 1]);
+				else return base32.Substring(0, l - 1);
 			}
 			return base32;
 		}
