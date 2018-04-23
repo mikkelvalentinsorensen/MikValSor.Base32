@@ -30,6 +30,8 @@ namespace MikValSor.Encoding
 			StringBuilder stringBuilder = new StringBuilder((byteArray.Length * 8 + 4) / 5);
 
 			int buffer = byteArray[0];
+			int index = 0;
+			int pad = 0;
 			int next = 1;
 			int bitsLeft = 8;
 			while (bitsLeft > 0 || next < byteArray.Length)
@@ -44,13 +46,14 @@ namespace MikValSor.Encoding
 					}
 					else
 					{
-						int pad = 5 - bitsLeft;
+						pad = 5 - bitsLeft;
 						buffer <<= pad;
 						bitsLeft += pad;
 					}
 				}
+				index = 31 & (buffer >> (bitsLeft - 5));
 				bitsLeft -= 5;
-				stringBuilder.Append(Base32RFC4648Mapping.RFC4648Chars[31 & (buffer >> (bitsLeft - 5))]);
+				stringBuilder.Append(Base32RFC4648Mapping.RFC4648Chars[index]);
 			}
 			if (padOutput)
 			{
