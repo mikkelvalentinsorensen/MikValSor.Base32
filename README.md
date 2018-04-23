@@ -2,8 +2,8 @@
 
 Libaray for Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.
 
-Encoding Example:
-`
+## Encoding Example:
+```
 	static void EncodeExample()
 	{
 		var bytearray = new byte[] { 0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11 };
@@ -15,10 +15,10 @@ Encoding Example:
 		 Output:
 		 base32string: AAAQEBAFAYDQQCIKBM
 	 **/
-`
+```
 
-Decoding Example:
-`
+## Decoding Example:
+```
 	static void DecodeExample()
 	{
 		var base32string = "AAAQEBAFAYDQQCIKBM======";
@@ -43,4 +43,4 @@ Decoding Example:
 		bytearray[9]: 10
 		bytearray[10]: 11
 	 **/
-`
+```
