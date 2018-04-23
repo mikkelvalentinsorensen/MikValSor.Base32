@@ -62,7 +62,7 @@ static void ValueTypeEncodeExample()
 **/
 ```
 
-## Value Typee Parse Example:
+## Value Type Parse Example:
 ```cs
 static void ValueTypeParseExample()
 {
