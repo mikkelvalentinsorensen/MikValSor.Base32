@@ -1,6 +1,4 @@
-# MikValSor.Base32
-
-Libaray for Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.
+.NET Standard Libaray for Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.
 
 ## Encoding Example:
 ```cs
@@ -12,9 +10,9 @@ static void EncodeExample()
 	System.Console.WriteLine($"base32string: {base32string}");
 }
 /**
-	Output:
-	base32string: AAAQEBAFAYDQQCIKBM
-**/
+		Output:
+		base32string: AAAQEBAFAYDQQCIKBM======
+	**/
 ```
 
 ## Decoding Example:

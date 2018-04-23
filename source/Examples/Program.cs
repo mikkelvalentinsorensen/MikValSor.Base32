@@ -15,7 +15,7 @@
 	}
 	/**
 		 Output:
-		 base32string: AAAQEBAFAYDQQCIKBM
+		 base32string: AAAQEBAFAYDQQCIKBM======
 	 **/
 
 	static void DecodeExample()
