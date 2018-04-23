@@ -2,15 +2,23 @@
 
 namespace MikValSor.Encoding
 {
-    internal class Base32RFC4648Mapping
+    internal sealed class Base32RFC4648Mapping : IBase32Mapping
 	{
-		internal static readonly char[] RFC4648Chars = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '2', '3', '4', '5', '6', '7' };
-		internal static Dictionary<char, int> RFC4648CharValues = new Dictionary<char, int>();
-		internal static readonly char PaddingChar = '=';
+		internal static IBase32Mapping Instance = new Base32RFC4648Mapping();
+		static char[] Chars = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '2', '3', '4', '5', '6', '7' };
+		static Dictionary<char, int> CharValues = new Dictionary<char, int>();
+		static char PaddingChar = '=';
 
 		static Base32RFC4648Mapping()
 		{
-			for (int i = 0; i < RFC4648Chars.Length; i++) RFC4648CharValues[RFC4648Chars[i]] = i;
+			for (int i = 0; i < Chars.Length; i++) CharValues[Chars[i]] = i;
 		}
+		internal Base32RFC4648Mapping()
+		{
+		}
+
+		char[] IBase32Mapping.Chars => Chars;
+		Dictionary<char, int> IBase32Mapping.CharValues => CharValues;
+		char IBase32Mapping.PaddingChar => PaddingChar;
 	}
 }

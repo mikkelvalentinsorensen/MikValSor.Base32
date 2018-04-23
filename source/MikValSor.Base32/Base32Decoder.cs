@@ -20,7 +20,8 @@
 		public static byte[] Decode(string base32, Base32Format format = Base32Format.RFC4648)
 		{
 			if (base32.Length == 0) return new byte[0];
-			base32 = RemovePadding(base32, Base32RFC4648Mapping.PaddingChar);
+			var mapping = Base32Mapping.GetMapping(format);
+			base32 = RemovePadding(base32, mapping.PaddingChar);
 
 			byte[] result = new byte[base32.Length * 5 / 8];
 			int buffer = 0;
@@ -29,12 +30,12 @@
 
 			foreach (var c in base32.ToCharArray())
 			{
-				if (!Base32RFC4648Mapping.RFC4648CharValues.ContainsKey(c))
+				if (!mapping.CharValues.ContainsKey(c))
 				{
 					throw new Base32DecodingException($"Character was illigal: {c}");
 				}
 				buffer <<= 5;
-				buffer |= Base32RFC4648Mapping.RFC4648CharValues[c] & 31;
+				buffer |= mapping.CharValues[c] & 31;
 				bitsLeft += 5;
 				if (bitsLeft >= 8)
 				{

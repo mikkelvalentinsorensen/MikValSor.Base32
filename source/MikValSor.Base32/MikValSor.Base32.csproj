@@ -9,14 +9,19 @@
     <PackageProjectUrl>https://github.com/mikkelvalentinsorensen/MikValSor.Base32</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mikkelvalentinsorensen/MikValSor.Base32</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <PackageTags>Base32 Encoder Decoder RFC4648 MikValSor</PackageTags>
+    <PackageTags>Base32 Encoder Decoder RFC4648 z-base-32 ZBase32 Crockfords CrockfordsBase32 base32hex Triacontakaidecimal  RFC2938 MikValSor</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <Description>Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.</Description>
+    <Description>Base32 Encoder, Decoder and ValueType. Implementing multiple standards:
+- [default] Base32 according to RFC4648.
+- z-base-32 aka. ZBase32.
+- Crockford's Base32.
+- base32hex / Triacontakaidecimal according to RFC 2938.</Description>
     <Copyright>Mikkel Valentin Sørensen</Copyright>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.2</Version>
-    <PackageReleaseNotes>1.0.2 - Fixed encoding bug and optimizations.
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>1.0.3 - Added support for z-base-32, Crockford's Base32 and base32hex / Triacontakaidecimal / RFC 2938
+1.0.2 - Fixed encoding bug and optimizations.
 1.0.1 - Added in class documentation.
 1.0.0 - Initial release.</PackageReleaseNotes>
     <FileVersion>1.0.0.0</FileVersion>

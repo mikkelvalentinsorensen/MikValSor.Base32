@@ -1,4 +1,8 @@
-.NET Standard Libaray for Base32 Encoder, Decoder and ValueType. Implemented according to RFC4648.
+.NET Standard Libaray for Base32 Encoder, Decoder and ValueType. Implemented multiple standards:
+- [default] Base32 according to RFC4648.
+- z-base-32 aka. ZBase32.
+- Crockford's Base32.
+- base32hex / Triacontakaidecimal according to RFC 2938.
 
 ## Encoding Example:
 ```cs

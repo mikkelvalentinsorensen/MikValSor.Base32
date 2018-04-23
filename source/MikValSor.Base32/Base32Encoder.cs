@@ -4,7 +4,7 @@ using System.Text;
 namespace MikValSor.Encoding
 {
 	/// <summary>
-	///		Class used to endoce byte arrays to Base32 strings.
+	///		Class used to encode byte arrays to Base32 strings.
 	/// </summary>
 	public static class Base32Encoder
 	{
@@ -27,6 +27,7 @@ namespace MikValSor.Encoding
 			if (byteArray.Length == 0) return String.Empty;
 			if (byteArray.Length >= (1 << 28)) throw new ArgumentOutOfRangeException(nameof(byteArray));
 
+			var mapping = Base32Mapping.GetMapping(format);
 			StringBuilder stringBuilder = new StringBuilder((byteArray.Length * 8 + 4) / 5);
 
 			int buffer = byteArray[0];
@@ -53,12 +54,12 @@ namespace MikValSor.Encoding
 				}
 				index = 31 & (buffer >> (bitsLeft - 5));
 				bitsLeft -= 5;
-				stringBuilder.Append(Base32RFC4648Mapping.RFC4648Chars[index]);
+				stringBuilder.Append(mapping.Chars[index]);
 			}
 			if (padOutput)
 			{
 				int padding = 8 - (stringBuilder.Length % 8);
-				if (padding > 0) stringBuilder.Append(new string(Base32RFC4648Mapping.PaddingChar, padding == 8 ? 0 : padding));
+				if (padding > 0) stringBuilder.Append(new string(mapping.PaddingChar, padding == 8 ? 0 : padding));
 			}
 			return stringBuilder.ToString();
 		}
