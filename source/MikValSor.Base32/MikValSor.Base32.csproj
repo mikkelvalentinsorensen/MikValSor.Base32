@@ -15,8 +15,9 @@
     <Copyright>Mikkel Valentin Sørensen</Copyright>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>1.0.1 - Added in class documentation.
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>1.0.2 - Fixed encoding bug and optimizations.
+1.0.1 - Added in class documentation.
 1.0.0 - Initial release.</PackageReleaseNotes>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
