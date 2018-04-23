@@ -53,27 +53,15 @@
 			{
 				if (base32[l - 2] == paddingChar)
 				{
-					if (base32[l - 3] == paddingChar)
+					if (base32[l - 4] == paddingChar)
 					{
-						if (base32[l - 4] == paddingChar)
+						if (base32[l - 5] == paddingChar)
 						{
-							if (base32[l - 5] == paddingChar)
-							{
-								if (base32[l - 6] == paddingChar)
-								{
-									if (base32[l - 7] == paddingChar)
-									{
-										return base32.Substring(0, base32[l - 7]);
-									}
-									else return base32.Substring(0, l - 6);
-								}
-								else return base32.Substring(0, l - 5);
-							}
-							else return base32.Substring(0, l - 4);
+							return base32.Substring(0, l - 6);
 						}
-						else return base32.Substring(0, l - 3);
+						else return base32.Substring(0, l - 4);
 					}
-					else return base32.Substring(0, l - 2);
+					else return base32.Substring(0, l - 3);
 				}
 				else return base32.Substring(0, l - 1);
 			}
