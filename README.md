@@ -12,9 +12,9 @@ static void EncodeExample()
 	System.Console.WriteLine($"base32string: {base32string}");
 }
 /**
-		Output:
-		base32string: AAAQEBAFAYDQQCIKBM
-	**/
+	Output:
+	base32string: AAAQEBAFAYDQQCIKBM
+**/
 ```
 
 ## Decoding Example:
@@ -42,5 +42,5 @@ static void DecodeExample()
 	bytearray[8]: 9
 	bytearray[9]: 10
 	bytearray[10]: 11
-	**/
+**/
 ```
