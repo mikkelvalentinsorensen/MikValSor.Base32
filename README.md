@@ -14,9 +14,9 @@ static void EncodeExample()
 	System.Console.WriteLine($"base32string: {base32string}");
 }
 /**
-		Output:
-		base32string: AAAQEBAFAYDQQCIKBM======
-	**/
+	Output:
+	base32string: AAAQEBAFAYDQQCIKBM======
+**/
 ```
 
 ## Decoding Example:
