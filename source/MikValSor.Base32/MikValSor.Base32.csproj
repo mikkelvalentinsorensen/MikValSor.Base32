@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <TargetFrameworks>netstandard1.0;net45</TargetFrameworks>
     <RootNamespace>MikValSor.Encoding</RootNamespace>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -19,8 +19,9 @@
     <Copyright>Mikkel Valentin Sørensen</Copyright>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.3</Version>
-    <PackageReleaseNotes>1.0.3 - Added support for z-base-32, Crockford's Base32 and base32hex / Triacontakaidecimal / RFC 2938
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>1.0.4 - Added .NET Framework 4.5 build output.
+1.0.3 - Added support for z-base-32, Crockford's Base32 and base32hex / Triacontakaidecimal / RFC 2938
 1.0.2 - Fixed encoding bug and optimizations.
 1.0.1 - Added in class documentation.
 1.0.0 - Initial release.</PackageReleaseNotes>
