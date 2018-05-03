@@ -1,7 +1,6 @@
 ﻿using MikValSor.Immutable;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
 
@@ -155,11 +154,6 @@ namespace MikValSor.Encoding
 		}
 		private Base32(SerializationInfo info, StreamingContext context)
 		{
-#if DEBUG
-			immutableValidator.EnsureImmutable(this);
-			serializableValidator.EnsureSerializable(this);
-#endif
-
 			Bytes = (ImmutableCollection<byte>)info.GetValue("B", typeof(ImmutableCollection<byte>));
 			Format = (Base32Format)info.GetValue("F", typeof(Base32Format));
 			Value = Base32Encoder.Encode(Bytes, Format);
