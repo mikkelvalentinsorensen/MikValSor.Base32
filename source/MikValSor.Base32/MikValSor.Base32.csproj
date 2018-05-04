@@ -27,8 +27,9 @@
 1.0.1 - Added in class documentation.
 1.0.0 - Initial release.</PackageReleaseNotes>
     <FileVersion>1.0.0.0</FileVersion>
+    <PackageIconUrl>https://raw.githubusercontent.com/mikkelvalentinsorensen/MikValSor/master/icon/icon.png</PackageIconUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MikValSor.ImmutableCollection" Version="1.0.1" />
+    <PackageReference Include="MikValSor.ImmutableCollection" Version="1.0.2" />
   </ItemGroup>
 </Project>
