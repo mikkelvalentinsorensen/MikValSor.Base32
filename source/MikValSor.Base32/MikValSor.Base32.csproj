@@ -19,8 +19,9 @@
     <Copyright>Mikkel Valentin Sørensen</Copyright>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.5</Version>
-    <PackageReleaseNotes>1.0.5 - Made Base32 value type Immutable and Serializable.
+    <Version>1.0.6</Version>
+    <PackageReleaseNotes>1.0.6 - Added Icon.
+1.0.5 - Made Base32 value type Immutable and Serializable.
 1.0.4 - Added .NET Framework 4.5 build output.
 1.0.3 - Added support for z-base-32, Crockford's Base32 and base32hex / Triacontakaidecimal / RFC 2938
 1.0.2 - Fixed encoding bug and optimizations.
