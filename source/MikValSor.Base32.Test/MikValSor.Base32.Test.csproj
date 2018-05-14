@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MikValSor.ImmutableValidator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MikValSor.ImmutableValidator.1.0.6\lib\net45\MikValSor.ImmutableValidator.dll</HintPath>
+      <HintPath>..\..\packages\MikValSor.ImmutableValidator.1.0.7\lib\net45\MikValSor.ImmutableValidator.dll</HintPath>
     </Reference>
     <Reference Include="MikValSor.SerializableValidator, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MikValSor.SerializableValidator.1.0.2\lib\net45\MikValSor.SerializableValidator.dll</HintPath>
