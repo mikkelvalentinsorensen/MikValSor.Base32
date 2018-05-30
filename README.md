@@ -1,8 +1,10 @@
-.NET Standard Libaray for Base32 Encoder, Decoder and ValueType. Implementing multiple standards:
+.NET Libaray for Base32 Encoder, Decoder and ValueType. Implementing multiple standards:
 - [default] Base32 according to RFC4648.
 - z-base-32 aka. ZBase32.
 - Crockford's Base32.
 - base32hex / Triacontakaidecimal according to RFC 2938.
+
+Nuget package: [https://www.nuget.org/packages/MikValSor.Base32](https://www.nuget.org/packages/MikValSor.Base32)
 
 ## Encoding Example:
 ```cs
